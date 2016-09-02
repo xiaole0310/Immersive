@@ -21,9 +21,12 @@
         android:layout_height="match_parent"
         android:src="@drawable/bg"
         android:scaleType="centerCrop" />
-
 </RelativeLayout>
+# 真正的沉浸式模式
 
+虽说沉浸式导航栏这个东西是被很多人误叫的一种称呼，但沉浸式模式的确是存在的。那么我们如何才能实现像海岛奇兵以及爱奇艺那样的沉浸式模式呢？
+
+首先你应该确定自己是否真的需要这个功能，因为除了像游戏或者视频软件这类特殊的应用，大多数的应用程序都是用不到沉浸式模式的。
 当你确定要使用沉浸式模式，那么只需要重写Activity的onWindowFocusChanged()方法，然后加入如下逻辑即可：
 
 public class MainActivity extends AppCompatActivity {
